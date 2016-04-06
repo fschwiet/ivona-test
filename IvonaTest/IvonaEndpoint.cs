@@ -1,4 +1,4 @@
-namespace haypagina.CLI
+namespace IvonaTest
 {
     public enum IvonaEndpoint
     {

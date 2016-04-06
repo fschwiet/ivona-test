@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -7,11 +6,9 @@ using System.Security.Cryptography;
 using System.Text;
 using ManyConsole;
 
-
-
-namespace haypagina.CLI
+namespace IvonaTest
 {
-    public class Ivona : ConsoleCommand
+    public class IvonaCommand : ConsoleCommand
     {
         public IvonaEndpointInfo Endpoint;
         public string IvonaAccessKey = "12345";
@@ -19,7 +16,7 @@ namespace haypagina.CLI
         public bool UseFiddlerProxy = false;
         public DateTime UtcTime;
 
-        public Ivona()
+        public IvonaCommand()
         {
             this.IsCommand("ivona");
             this.HasOption<IvonaEndpoint>("e=", String.Format("Endpoint id ({0}).", String.Join(", ", Enum.GetValues(typeof(IvonaEndpoint)).Cast<IvonaEndpoint>())), v => Endpoint = IvonaEndpointInfo.Get(v));

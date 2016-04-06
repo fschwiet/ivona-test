@@ -1,6 +1,6 @@
 using System;
 
-namespace haypagina.CLI
+namespace IvonaTest
 {
     public class IvonaEndpointInfo
     {
